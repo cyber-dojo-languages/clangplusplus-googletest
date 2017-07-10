@@ -1,6 +1,15 @@
-CXXFLAGS += -I. -std=c++14 -Wall -Wextra -Werror
-CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=undefined
-CXXFLAGS += -fsanitize=address -fno-omit-frame-pointer
+CXX_STD=c++1z
+#CXX_STD=c++14
+
+CXXFLAGS += -I. -std=$(CXX_STD) -Wall -Wextra -Werror
+
+# currently ubuntu17.04 + clang++4.0 gives spurious
+# Leak warnings when sanitizers are enabled with c++17
+
+ifeq ($(CXX_STD),c++14)
+  CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=undefined
+  CXXFLAGS += -fsanitize=address -fno-omit-frame-pointer
+endif
 
 GTEST_LIBS = -lgtest -lgtest_main -pthread
 
