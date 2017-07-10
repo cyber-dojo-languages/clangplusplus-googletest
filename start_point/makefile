@@ -1,16 +1,9 @@
-CXX_STD=c++1z
-#CXX_STD=c++14
-
-CXXFLAGS += -I. -std=$(CXX_STD) -Wall -Wextra -Werror
+CXXFLAGS += -I. -std=c++1z -Wall -Wextra -Werror
 CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=undefined
 CXXFLAGS += -fno-omit-frame-pointer
 
 # currently ubuntu17.04 + clang++4.0 gives spurious Leak
-# warnings when the address sanitizer is enabled with c++17
-
-ifeq ($(CXX_STD),c++14)
-  CXXFLAGS += -fsanitize=address
-endif
+# warnings when the address sanitizer is enabled.
 
 GTEST_LIBS = -lgtest -lgtest_main -pthread
 
