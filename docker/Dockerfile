@@ -3,7 +3,7 @@ MAINTAINER Byran Wills-Heath <byran@adgico.co.uk>
 
 # install clang++
 ENV CXX=clang++ CC=clang
-ARG VERSION=4.0.0
+ARG VERSION=3.8.0
 RUN wget http://llvm.org/releases/${VERSION}/clang+llvm-${VERSION}-x86_64-linux-gnu-ubuntu-14.04.tar.xz
 RUN tar -xvf clang+llvm-${VERSION}-x86_64-linux-gnu-ubuntu-14.04.tar.xz
 RUN  cp -r clang+llvm-${VERSION}-x86_64-linux-gnu-ubuntu-14.04/* /usr/
