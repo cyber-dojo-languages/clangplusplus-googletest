@@ -14,7 +14,6 @@ RUN update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 100
 RUN rm -rf clang+llvm-${VERSION}-x86_64-linux-gnu-ubuntu-14.04
 RUN rm -f clang+llvm-${VERSION}-x86_64-linux-gnu-ubuntu-14.04.tar.xz
 
-
 # Install googletest
 RUN apt-get update
 RUN apt-get install -y libgtest-dev cmake
@@ -24,19 +23,6 @@ RUN make
 RUN mv libg* /usr/lib
 # Remove cmake as it's no longer needed to make the image smaller
 RUN apt-get remove -y cmake
-
-
-
-
-
-
-#RUN apt-get update
-#RUN apt-get install --yes libgtest-dev
-#RUN apt-get install --yes cmake
-
-#RUN cd /usr/src/gtest && cmake .
-#RUN cd /usr/src/gtest && make
-#RUN cd /usr/src/gtest && mv libg* /usr/lib
 
 COPY red_amber_green.rb /usr/local/bin
 
