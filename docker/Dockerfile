@@ -1,13 +1,10 @@
-FROM       cyberdojofoundation/clangplusplus:4.0.0
-MAINTAINER Byran Wills-Heath <byran@adgico.co.uk>
+FROM  cyberdojofoundation/clangplusplus:4.0.0
+LABEL maintainer=byran@adgico.co.uk
 
-RUN apt-get update
-RUN apt-get install --yes libgtest-dev
-RUN apt-get install --yes cmake
+ADD install.sh /
 
-RUN cd /usr/src/gtest && cmake .
-RUN cd /usr/src/gtest && make
-RUN cd /usr/src/gtest && mv libg* /usr/lib
+RUN /install.sh && \
+    rm -f /install.sh
 
 COPY red_amber_green.rb /usr/local/bin
 
