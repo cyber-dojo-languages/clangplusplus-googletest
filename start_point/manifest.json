@@ -1,5 +1,7 @@
 
 {
+  "display_name": "C++ (clang++), GoogleTest",
+
   "visible_filenames": [
     "hiker.tests.cpp",
     "hiker.cpp",
@@ -8,9 +10,9 @@
     "cyber-dojo.sh"
   ],
 
+  "image_name": "cyberdojofoundation/clangpp_googletest",
+
   "filename_extension" : ".cpp",
 
-  "display_name": "C++ (clang++), GoogleTest",
-
-  "image_name": "cyberdojofoundation/clangpp_googletest"
+  "runner_choice": "stateless"
 }
