@@ -1,9 +1,16 @@
 CXXFLAGS += -I. -std=c++1z -Wall -Wextra -Werror
-CXXFLAGS += -fsanitize=undefined -fno-sanitize-recover=undefined
-CXXFLAGS += -fno-omit-frame-pointer
+CXXFLAGS +=	-Wshadow
+CXXFLAGS +=	-Wfloat-equal
+CXXFLAGS +=	-O
+CXXFLAGS += -Wsequence-point
+CXXFLAGS += -Wmissing-noreturn
+CXXFLAGS += -Wunreachable-code
+CXXFLAGS += -Wmissing-prototypes
+CXXFLAGS += -Wstrict-prototypes
 
-# currently ubuntu17.04 + clang++4.0 gives spurious Leak
-# warnings when the address sanitizer is enabled.
+CXXFLAGS += -fsanitize=address
+CXXFLAGS += -fno-sanitize-recover=undefined
+CXXFLAGS += -fno-omit-frame-pointer
 
 GTEST_LIBS = -lgtest -lgtest_main -pthread
 
