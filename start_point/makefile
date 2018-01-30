@@ -1,7 +1,7 @@
 CXXFLAGS += -I. -std=c++1z -Wall -Wextra -Werror
-CXXFLAGS +=	-Wshadow
-CXXFLAGS +=	-Wfloat-equal
-CXXFLAGS +=	-O
+CXXFLAGS += -Wshadow
+CXXFLAGS += -Wfloat-equal
+CXXFLAGS += -O
 CXXFLAGS += -Wsequence-point
 CXXFLAGS += -Wmissing-noreturn
 CXXFLAGS += -Wunreachable-code
