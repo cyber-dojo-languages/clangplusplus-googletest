@@ -8,7 +8,7 @@ CXXFLAGS += -Wunreachable-code
 CXXFLAGS += -Wmissing-prototypes
 CXXFLAGS += -Wstrict-prototypes
 
-CXXFLAGS += -fsanitize=address
+CXXFLAGS += -fsanitize=leak,address
 CXXFLAGS += -fno-sanitize-recover=undefined
 CXXFLAGS += -fno-omit-frame-pointer
 
