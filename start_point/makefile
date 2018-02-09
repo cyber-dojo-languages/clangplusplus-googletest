@@ -5,8 +5,6 @@ CXXFLAGS += -O
 CXXFLAGS += -Wsequence-point
 CXXFLAGS += -Wmissing-noreturn
 CXXFLAGS += -Wunreachable-code
-CXXFLAGS += -Wmissing-prototypes
-CXXFLAGS += -Wstrict-prototypes
 
 CXXFLAGS += -fsanitize=leak,address
 CXXFLAGS += -fno-sanitize-recover=undefined
