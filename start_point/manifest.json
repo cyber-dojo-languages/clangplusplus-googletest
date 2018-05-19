@@ -1,4 +1,3 @@
-
 {
   "display_name": "C++ (clang++), GoogleTest",
 
@@ -9,6 +8,8 @@
     "makefile",
     "cyber-dojo.sh"
   ],
+
+  "hidden_filenames": [ ".*\\.gcov", ".*\\.gcno" ],
 
   "image_name": "cyberdojofoundation/clangpp_googletest",
 

@@ -1,10 +1,14 @@
-CXXFLAGS += -I. -std=c++1z -Wall -Wextra -Werror
+CXXFLAGS += -I.
+CXXFLAGS += -std=c++1z
+CXXFLAGS += -Wall -Wextra -Werror
 CXXFLAGS += -Wshadow
 CXXFLAGS += -Wfloat-equal
 CXXFLAGS += -O
 CXXFLAGS += -Wsequence-point
 CXXFLAGS += -Wmissing-noreturn
 CXXFLAGS += -Wunreachable-code
+
+CXXFLAGS += -fprofile-arcs -ftest-coverage
 
 CXXFLAGS += -fsanitize=leak,address
 CXXFLAGS += -fno-sanitize-recover=undefined
