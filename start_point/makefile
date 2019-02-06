@@ -2,7 +2,6 @@ CXXFLAGS += -I.
 CXXFLAGS += -std=c++1z
 CXXFLAGS += -Wall
 CXXFLAGS += -Wextra
-CXXFLAGS += -Werror
 CXXFLAGS += -Wshadow
 CXXFLAGS += -Wfloat-equal
 CXXFLAGS += -O
