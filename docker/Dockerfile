@@ -16,3 +16,8 @@ LABEL maintainer=byran@adgico.co.uk
 COPY install.sh .
 RUN ./install.sh && rm ./install.sh
 COPY red_amber_green.rb /usr/local/bin
+
+RUN apt-get install --yes curl
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+RUN python get-pip.py
+RUN pip install gcovr

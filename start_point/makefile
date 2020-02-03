@@ -1,5 +1,5 @@
 CXXFLAGS += -I.
-CXXFLAGS += -std=c++1z
+CXXFLAGS += -std=c++2a
 CXXFLAGS += -Wall
 CXXFLAGS += -Wextra
 CXXFLAGS += -Wshadow
@@ -25,7 +25,7 @@ CPP_FILES = $(wildcard *.cpp)
 test.output: test makefile
 	@./$< --gtest_shuffle
 
-test: makefile $(CPP_FILES) $(COMPILED_HPP_FILES)
+test: $(CPP_FILES) $(COMPILED_HPP_FILES)
 	@$(CXX) $(CXXFLAGS) -O $(CPP_FILES) $(GTEST_LIBS) -o $@
 
 # This rule ensures header files build in their own right.
