@@ -1,7 +1,8 @@
 {
   "image_name": "cyberdojofoundation/clangpp_googletest",
   "display_name": "C++ (clang++), GoogleTest",
-  "visible_filenames": [
+  "visible_filenames":
+  [
     "hiker.tests.cpp",
     "hiker.cpp",
     "hiker.hpp",
