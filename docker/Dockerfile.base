@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/clangplusplus:ee058a5
+FROM  ghcr.io/cyber-dojo-languages/clangplusplus:148989c
 LABEL maintainer=byran@adgico.co.uk
 
 COPY install.sh .
